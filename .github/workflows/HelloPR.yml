@@ -11,17 +11,30 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "greet"
-  greet:
+  # This workflow contains a single job called "build"
+  build: 
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+          - name: Accès code
+            uses: actions/checkout@v3
+
+          - name: Setup python
+            uses: actions/setup-python@v4
+
+          - name: kubectl - command-line tool
+  # You may pin to the exact commit or the version.
+  # uses: asonnleitner/kubectl@2c9eb08b84431e4d9c5de88011b0162cfe161598
+            uses: asonnleitner/kubectl@master
+            with:
+    # The command which should be run
+              command: python main.py
+          
     # Runs a single command using the runners shell
           - name: Simple Echo Test
-  # You may pin to the exact commit or the version.
-  # uses: ashwin-ant/action-test-publish@096daae8be9c211b566cb9d7c02bcd9a26a4248f
+  
             uses: ashwin-ant/action-test-publish@beta
             with:
     # Message to echo
