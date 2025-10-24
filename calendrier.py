@@ -13,6 +13,4 @@ def createEvents(begin_date, time_event, name):
 	print(event)
 	return event
 	
-	
-	
 
