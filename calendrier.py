@@ -14,3 +14,11 @@ def createEvents(begin_date, time_event, name):
 	return event
 	
 
+def Get_events(tab_event):
+	return tab_event
+	print(tab_event)
+
+
+def Add_Events(event, tab_event):
+	tab_event.append(event)
+	return tab_event
