@@ -17,6 +17,15 @@ def cpt():
 def incr():
 	count2 = int(cpt())
 	count2 +=1
-	res = str(count2)
-	return res
+	res2 = str(count2)
+	return res2
+	
+
+@app.route("/decr")
+
+def decr():
+	count3 = int(cpt())
+	count3 -=1
+	res3 = str(count3)
+	return res3
 	
