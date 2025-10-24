@@ -6,10 +6,10 @@ time_event = 30
 name = "Session Raclette"
 
 def createEvents(begin_date, time_event, name):
-	date = datetime.striptime (begin_date, "%d/%m/%Y")
+	date = datetime.strptime (begin_date, "%d/%m/%Y")
 	res_date = date.timestamp()
 	
-	event = (resdate,name)
+	event = (res_date, time_event, name)
 	print(event)
 	return event
 	
